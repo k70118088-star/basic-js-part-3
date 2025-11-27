@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Demo</title>
+
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="text-center">
+       <h3 class="font-normal text-[25px] text-[#808080] mb-2.5">Sidebar</h3>
+       <button id="openBtn" class="px-4 py-2 bg-[linear-gradient(97.42deg,_#128DFF_-4.95%,_#1444EF_109.04%)] text-white rounded-[4px] shadow">Open Sidebar</button>
+    </div>
+    <div id="sidebar"
+         class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg 
+                -translate-x-full transition-transform duration-300">
+        <div class="p-4 ">
+            <h2 class="text-xl">Sidebar</h2>
+        </div>
+
+        <ul class="p-4 space-y-3">
+            <li class="text-center px-4 py-2 bg-white border border-[#128DFF] text-[#128DFF] hover:bg-[linear-gradient(97.42deg,_#128DFF_-4.95%,_#1444EF_109.04%)] hover:text-white rounded-[4px]"><button>link 1</button></li>
+            <li class="text-center px-4 py-2 bg-white border border-[#128DFF] text-[#128DFF] hover:bg-[linear-gradient(97.42deg,_#128DFF_-4.95%,_#1444EF_109.04%)] hover:text-white rounded-[4px]"><button>link 2</button></li>
+            <li class="text-center px-4 py-2 bg-white border border-[#128DFF] text-[#128DFF] hover:bg-[linear-gradient(97.42deg,_#128DFF_-4.95%,_#1444EF_109.04%)] hover:text-white rounded-[4px]"><button>link 3</button></li>
+            <li class="text-center px-4 py-2 bg-white border border-[#128DFF] text-[#128DFF] hover:bg-[linear-gradient(97.42deg,_#128DFF_-4.95%,_#1444EF_109.04%)] hover:text-white rounded-[4px]"><button>link 4</button></li>
+            <li class="text-center px-4 py-2 bg-white border border-[#128DFF] text-[#128DFF] hover:bg-[linear-gradient(97.42deg,_#128DFF_-4.95%,_#1444EF_109.04%)] hover:text-white rounded-[4px]"><button>link 5</button></li>
+        </ul>
+    </div>
+
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const openBtn = document.getElementById("openBtn");
+
+        openBtn.addEventListener("click", () => {
+            sidebar.classList.remove("-translate-x-full");
+            sidebar.classList.add("translate-x-0");
+            
+        });
+
+    </script>
+
+</body>
+</html>
