@@ -49,24 +49,20 @@
 
     <script>
         const sidebar = document.getElementById("sidebar");
-        const overlay = document.getElementById("overlay");
         const openBtn = document.getElementById("openBtn");
         const closeBtn = document.getElementById("closeBtn");
 
         openBtn.addEventListener("click", () => {
             sidebar.classList.remove("-translate-x-full");
             sidebar.classList.add("translate-x-0");
-            overlay.classList.remove("hidden");
         });
 
         const closeSidebar = () => {
             sidebar.classList.add("-translate-x-full");
             sidebar.classList.remove("translate-x-0");
-            overlay.classList.add("hidden");
         };
 
         closeBtn.addEventListener("click", closeSidebar);
-        overlay.addEventListener("click", closeSidebar);
     </script>
 
 </body>
